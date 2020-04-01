@@ -13,6 +13,10 @@
         <br>
         <h5>Technology used:</h5>
         <p>{{ project.technology }}</p>
+        <br>
+        <a href="{% url 'project_index' %}" class="btn btn-primary navbar-dark bg-info">
+            Go back...
+        </a>
     </div>
 </div>
 {% endblock page_content %}
