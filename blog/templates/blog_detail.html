@@ -12,9 +12,13 @@
         {% endfor %}
     </small>
     <p>{{ post.body | linebreaks }}</p>
-    <a href="{% url 'blog_index' %}" class="btn btn-primary navbar-dark bg-info">
-        Go back...
-    </a>
+    <button type="button" class="btn-sm btn-outline-info btn-link">
+        <a href="{% url 'blog_index' %}">
+            Go back...
+        </a>
+    </button>
+    <br>
+    <br>
     <h3>Leave a comment:</h3>
     <form action="/blog/{{ post.pk }}/" method="post">
         {% csrf_token %}
