@@ -1,4 +1,28 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block page_content %}
+
+    <h1>JeanPy - Developer</h1>
+    <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-8">
+                    <img class="card-img-top" src="{% static 'img/profile-pic.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">What do I do:</h5>
+                        <p class="card-text">
+                            Hello. My name is Jean, and I like working with Python and Django.
+                            I'm learning a bit of Java, but my what I like the most is building 
+                            websites. Make sure you check my blog and tutorials, you might find 
+                            something useful for yourself.
+                        </p>
+                        <a href="{% url 'project_index' %}" class="btn-sm btn-outline-info btn-link">
+                            My Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+
 {% endblock page_content %}
