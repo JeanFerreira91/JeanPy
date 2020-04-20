@@ -1,6 +1,8 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block page_content %}
-<div class="col-md-8 offset-md-2">
+<div class="col-md-8">
     <h1>{{ post.title }}</h1>
     <small>
         {{ post.created_on.date }} |&nbsp;
@@ -11,6 +13,11 @@
         </a>&nbsp;
         {% endfor %}
     </small>
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <img class="img-fluid z-depth-1" src="{% static post.image %}">
+        </div>
+    </div>
     <p>{{ post.body | linebreaks }}</p>
     <button type="button" class="btn-sm btn-outline-info btn-link">
         <a href="{% url 'blog_index' %}">

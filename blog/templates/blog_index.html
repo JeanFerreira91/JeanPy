@@ -16,7 +16,11 @@
             </a>&nbsp;
             {% endfor %}
         </small>
-        <img class="card-img-top" src="{% static blog.image %}">
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <img class="img-fluid z-depth-1" src="{% static post.image %}">
+            </div>
+        </div>
         <p>{{ post.body | slice:':400' }}...</p>
         <button type="button" class="btn-sm btn-outline-info btn-link">
             <a href="{% url 'blog_detail' post.pk %}">

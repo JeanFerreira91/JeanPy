@@ -9,7 +9,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    image = models.FilePathField(path='static/img', default='')
+    image = models.FilePathField(path='blog/static/img', default='')
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
