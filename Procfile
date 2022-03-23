@@ -1,1 +1,1 @@
-web: gunicorn JeanPy.wsgi
+web: gunicorn personal_portfolio.wsgi
